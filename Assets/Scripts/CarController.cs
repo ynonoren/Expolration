@@ -9,6 +9,7 @@ public class AxleInfo
     public WheelCollider rightWheel;
     public bool motor;
     public bool steering;
+    public bool Braking;
 }
 
 public class CarController : MonoBehaviour
@@ -16,6 +17,12 @@ public class CarController : MonoBehaviour
     public List<AxleInfo> axleInfos;
     public FloatReference maxMotorTorque;
     public FloatReference maxSteeringAngle;
+    public FloatReference brakeTorqe;
+    private bool applyBrake=false;
+
+
+
+
 
     // finds the corresponding visual wheel
     // correctly applies the transform
@@ -38,8 +45,10 @@ public class CarController : MonoBehaviour
 
     public void FixedUpdate()
     {
+
         float motor = maxMotorTorque * Input.GetAxis("Vertical");
         float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
+        HandBrake();
 
         foreach (AxleInfo axleInfo in axleInfos)
         {
@@ -48,13 +57,38 @@ public class CarController : MonoBehaviour
                 axleInfo.leftWheel.steerAngle = steering;
                 axleInfo.rightWheel.steerAngle = steering;
             }
-            if (axleInfo.motor)
+            if (axleInfo.motor&& !applyBrake)
             {
                 axleInfo.leftWheel.motorTorque = motor;
                 axleInfo.rightWheel.motorTorque = motor;
+
             }
+            if(axleInfo.Braking && applyBrake)
+                {
+                axleInfo.leftWheel.brakeTorque = brakeTorqe;
+                axleInfo.rightWheel.brakeTorque = brakeTorqe;
+                axleInfo.leftWheel.motorTorque = 0;
+                axleInfo.rightWheel.motorTorque = 0;
+            }
+            else
+            {
+                axleInfo.leftWheel.brakeTorque = 0;
+                axleInfo.rightWheel.brakeTorque = 0;
+            }
+
             ApplyLocalPositionToVisuals(axleInfo.leftWheel);
             ApplyLocalPositionToVisuals(axleInfo.rightWheel);
+        }
+    }
+    void HandBrake()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+               applyBrake = true;
+        }
+        else
+        {
+            applyBrake = false;
         }
     }
 }

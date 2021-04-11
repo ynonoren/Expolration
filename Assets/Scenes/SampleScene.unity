@@ -2511,17 +2511,42 @@ PrefabInstance:
     - target: {fileID: 6013472830989431719, guid: e19d3c28614fd2f438aefe619cbc7823,
         type: 3}
       propertyPath: m_Mass
-      value: 1500
+      value: 1300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013472830989431721, guid: e19d3c28614fd2f438aefe619cbc7823,
+        type: 3}
+      propertyPath: brakeTorqe
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013472830989431721, guid: e19d3c28614fd2f438aefe619cbc7823,
+        type: 3}
+      propertyPath: brakeTorqe.ConstantValue
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 6013472830989431721, guid: e19d3c28614fd2f438aefe619cbc7823,
         type: 3}
       propertyPath: maxMotorTorque.ConstantValue
-      value: 400
+      value: 2500
       objectReference: {fileID: 0}
     - target: {fileID: 6013472830989431721, guid: e19d3c28614fd2f438aefe619cbc7823,
         type: 3}
       propertyPath: maxSteeringAngle.ConstantValue
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013472830989431721, guid: e19d3c28614fd2f438aefe619cbc7823,
+        type: 3}
+      propertyPath: axleInfos.Array.data[0].Braking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013472830989431721, guid: e19d3c28614fd2f438aefe619cbc7823,
+        type: 3}
+      propertyPath: axleInfos.Array.data[1].Braking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013472830989431721, guid: e19d3c28614fd2f438aefe619cbc7823,
+        type: 3}
+      propertyPath: axleInfos.Array.data[1].steering
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6013472831005777596, guid: e19d3c28614fd2f438aefe619cbc7823,
         type: 3}
