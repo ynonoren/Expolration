@@ -9,7 +9,7 @@ public class GiveHealth : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.GetComponent<SimpleUnitHealth>())
+        if (other.gameObject.GetComponent<FuelManager>())
         {
             HP.SetValue(50);
         }
