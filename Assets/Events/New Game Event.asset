@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b1fb70724e6a53439089b96842e641a, type: 3}
-  m_Name: CurrentFuel
+  m_Script: {fileID: 11500000, guid: afde042156902ab4b9521d2a74eb2466, type: 3}
+  m_Name: New Game Event
   m_EditorClassIdentifier: 
-  DeveloperDescription: 
-  Value: 0

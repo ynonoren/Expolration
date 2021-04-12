@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36db411435d99cd4ba522f89c23e5300, type: 3}
-  m_Name: MaxFuel
+  m_Script: {fileID: 11500000, guid: 1b1fb70724e6a53439089b96842e641a, type: 3}
+  m_Name: DaytimeRemaining
   m_EditorClassIdentifier: 
   DeveloperDescription: 
-  Value: 50
+  Value: 0

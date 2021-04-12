@@ -5,13 +5,16 @@ using UnityEngine;
 public class GiveHealth : MonoBehaviour
 {
     public FloatReference HPBoost;
-    public FloatVariable HP;
-
+    public IntVariable HP;
+    
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.GetComponent<FuelManager>())
+        if (other.gameObject.CompareTag("Player"))
         {
-            HP.SetValue(50);
+            
+
+
+
         }
     }
 

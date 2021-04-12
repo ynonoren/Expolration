@@ -6,16 +6,19 @@ using UnityEngine;
 
     public class FuelManager : MonoBehaviour
     {
-        public FloatVariable fuel;
-        public FloatVariable fuelConsumptionRate;
+        public FloatVariable currentFuel;
+        public FloatReference fuelConsumptionRate;
+
         public bool refillFuel;
-        public FloatReference startingFuel;
+        public FloatReference fualCapacity;
         public BoolVariable dayIsRunning;
+        public BoolVariable outOfFuel;
     private void Start()
         {
-       
-        fuel.SetValue(startingFuel);
-       
+
+        currentFuel.SetValue(fualCapacity);
+        outOfFuel.SetValue(false);
+
         }
     private void Update()
     {
@@ -24,27 +27,34 @@ using UnityEngine;
             ConsumeFuel();
         }
     }
+
+
+
+
+
     public void ConsumeFuel()
         {
 
        
-        if (fuel.Value <= 0f)
+        if (currentFuel.Value <= 0f)
         {
             if (refillFuel)
             {
-                fuel.SetValue(startingFuel);
-                GetComponent<Rigidbody>().isKinematic = false;
+                currentFuel.SetValue(fualCapacity);
+              
+                outOfFuel.SetValue(false);
             }
             else
             {
-                GetComponent<Rigidbody>().isKinematic = true;
+             
+                outOfFuel.SetValue(true);
             }
          
          
         }
         else
         {
-            fuel.ApplyChange(-fuelConsumptionRate.Value/100);
+            currentFuel.ApplyChange(-fuelConsumptionRate.Value/100);
         }
         
        }

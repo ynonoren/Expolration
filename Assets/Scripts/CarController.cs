@@ -12,12 +12,14 @@ public class AxleInfo
     public bool Braking;
 }
 
+[RequireComponent (typeof(FuelManager))]
 public class CarController : MonoBehaviour
 {
     public List<AxleInfo> axleInfos;
     public FloatReference maxMotorTorque;
     public FloatReference maxSteeringAngle;
     public FloatReference brakeTorqe;
+    public BoolVariable outOfFuel;
     private bool applyBrake=false;
 
 
@@ -46,7 +48,17 @@ public class CarController : MonoBehaviour
     public void FixedUpdate()
     {
 
-        float motor = maxMotorTorque * Input.GetAxis("Vertical");
+        float motor;
+        if (outOfFuel.Value)
+        {
+            motor = 0;
+            Debug.Log("Engine report: no fuel");
+        }
+        else
+        {
+            motor = maxMotorTorque * Input.GetAxis("Vertical");
+        }
+
         float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
         HandBrake();
 
@@ -57,7 +69,7 @@ public class CarController : MonoBehaviour
                 axleInfo.leftWheel.steerAngle = steering;
                 axleInfo.rightWheel.steerAngle = steering;
             }
-            if (axleInfo.motor&& !applyBrake)
+            if (axleInfo.motor && !applyBrake)
             {
                 axleInfo.leftWheel.motorTorque = motor;
                 axleInfo.rightWheel.motorTorque = motor;

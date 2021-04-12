@@ -8,7 +8,7 @@ using UnityEngine.UI;
     public class SliderSetter : MonoBehaviour
     {
         public Slider Slider;
-        public FloatVariable Variable;
+        public IntVariable Variable;
 
         private void Update()
         {
