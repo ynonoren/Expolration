@@ -19,9 +19,8 @@ public class CarController : MonoBehaviour
     public FloatReference maxMotorTorque;
     public FloatReference maxSteeringAngle;
     public FloatReference brakeTorqe;
-    public BoolVariable outOfFuel;
     private bool applyBrake=false;
-
+    private bool toggleEngine=true;
 
 
 
@@ -47,16 +46,14 @@ public class CarController : MonoBehaviour
 
     public void FixedUpdate()
     {
-
         float motor;
-        if (outOfFuel.Value)
-        {
-            motor = 0;
-            Debug.Log("Engine report: no fuel");
+        if (toggleEngine)
+        { 
+            motor = maxMotorTorque * Input.GetAxis("Vertical");
         }
         else
         {
-            motor = maxMotorTorque * Input.GetAxis("Vertical");
+            motor = 0;
         }
 
         float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
@@ -88,6 +85,8 @@ public class CarController : MonoBehaviour
                 axleInfo.rightWheel.brakeTorque = 0;
             }
 
+         
+
             ApplyLocalPositionToVisuals(axleInfo.leftWheel);
             ApplyLocalPositionToVisuals(axleInfo.rightWheel);
         }
@@ -102,5 +101,17 @@ public class CarController : MonoBehaviour
         {
             applyBrake = false;
         }
+    }
+
+
+    public void CutEngine()
+    {
+
+        toggleEngine = false;
+
+    }
+    public void StartEngine()
+    {
+        toggleEngine = true;
     }
 }
