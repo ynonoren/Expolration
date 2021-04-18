@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParkingController : MonoBehaviour
+public class StoryEventController : MonoBehaviour
 {
     public Rigidbody rb;
     void Start()
