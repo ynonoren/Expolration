@@ -145,5 +145,6 @@ MonoBehaviour:
   EnterPOI: {fileID: 11400000, guid: aa7f69022539e714a952463aaafc95bf, type: 2}
   ExitPOI: {fileID: 11400000, guid: bb99f042847083340921d82c6f36c578, type: 2}
   InteractWithPOI: {fileID: 11400000, guid: d23f3ded1abefa645a673947c9bfefe0, type: 2}
-  Description: {fileID: 0}
+  PromptText: {fileID: 11400000, guid: dfce2b312e0f56d45b9131069bbeaf44, type: 2}
   Container: {fileID: 11400000, guid: 892bbbb3fdbe8c34d874288414bc1f74, type: 2}
+  location: {fileID: 0}

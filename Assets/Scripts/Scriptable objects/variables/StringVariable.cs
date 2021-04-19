@@ -3,7 +3,7 @@
 using UnityEngine;
 
 
-[CreateAssetMenu(menuName = "Exploration/StringVariable")]
+[CreateAssetMenu(menuName = "Exploration/Variable/StringVariable")]
 public class StringVariable : ScriptableObject
     {
         [SerializeField]
@@ -14,4 +14,7 @@ public class StringVariable : ScriptableObject
             get { return value; }
             set { this.value = value; }
         }
+
+
+
     }

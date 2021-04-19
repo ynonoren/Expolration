@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class PointOfInterest : MonoBehaviour
@@ -16,29 +17,34 @@ public class PointOfInterest : MonoBehaviour
    
     public StringVariable PromptText;
     public StringVariable Container;
+    public Location location;
+    public Location currentLocation;
+    private bool playerInPOI = false;
 
-
-
+    private void Update()
+    {
+        if (playerInPOI)
+        {
+            if (Input.GetKeyDown(interactKey) && isInteractable)
+            {
+               
+                InteractWithPOI.Raise();
+               
+            }
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            UpdateLocation();
+            playerInPOI = true;
+         
             UpdateTextContainer();
             EnterPOI.Raise();
         }
     }
-    private void OnTriggerStay(Collider other)
-    {
-        
-        if (other.gameObject.CompareTag("Player"))
-        {
-            if (Input.GetKeyDown(interactKey)&&isInteractable)
-            {
-                InteractWithPOI.Raise();
-            }
-
-        }
-    }
+ 
 
 
 
@@ -46,7 +52,8 @@ public class PointOfInterest : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-
+            
+            playerInPOI = false;
             ExitPOI.Raise();
 
 
@@ -66,6 +73,12 @@ public class PointOfInterest : MonoBehaviour
         }
     }
 
-
+    private void UpdateLocation()
+    {
+        currentLocation.LocationName=location.LocationName;
+        currentLocation.LocationDescription = location.LocationDescription;
+        currentLocation.LocationSprite = location.LocationSprite;
+    }
+   
 
 }
