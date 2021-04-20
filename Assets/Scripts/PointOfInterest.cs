@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PointOfInterest : MonoBehaviour
 {
-    public bool isInteractable;
+    public bool hasPrompt=true;
     public KeyCode interactKey=KeyCode.E;
 
 
@@ -16,7 +16,7 @@ public class PointOfInterest : MonoBehaviour
 
    
     public StringVariable PromptText;
-    public StringVariable Container;
+    public StringVariable POIPromptText;
     public Location location;
     public Location currentLocation;
     private bool playerInPOI = false;
@@ -25,7 +25,7 @@ public class PointOfInterest : MonoBehaviour
     {
         if (playerInPOI)
         {
-            if (Input.GetKeyDown(interactKey) && isInteractable)
+            if (Input.GetKeyDown(interactKey) && hasPrompt)
             {
                
                 InteractWithPOI.Raise();
@@ -64,12 +64,12 @@ public class PointOfInterest : MonoBehaviour
 
     private void UpdateTextContainer()
     {
-        if(isInteractable){
-            Container.Value = PromptText.Value + " [" + interactKey+"]";
+        if(hasPrompt){
+            POIPromptText.Value = location.LocationName + " [" + interactKey+"]";
         }
         else
         {
-            Container.Value = PromptText.Value;
+            POIPromptText.Value = PromptText.Value;
         }
     }
 

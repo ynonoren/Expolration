@@ -17,7 +17,7 @@ public class StoryWindowManager : MonoBehaviour
     public GameEvent endPOIInteraction;
 
     // Start is called before the first frame update
-    void Awake()
+    void OnEnable()
     {
        locationImage.sprite = currentLocation.LocationSprite;
        
@@ -26,6 +26,10 @@ public class StoryWindowManager : MonoBehaviour
        
         bodyText.text = currentLocation.LocationDescription;
        
+    }
+    private void Start()
+    {
+      
     }
 
     private void ResetCurrentLocation()
