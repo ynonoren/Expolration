@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d11a0aaa6567dab4aa6b18b899a8d71b, type: 3}
-  m_Name: HomeTown
+  m_Script: {fileID: 11500000, guid: d991ff9f9f7e25545a371e7b022be0bb, type: 3}
+  m_Name: Test Food
   m_EditorClassIdentifier: 
-  locationName: Home Town
-  locationDescription: Nothing to do here for now...
-  locationSprite: {fileID: 21300000, guid: af547b651b125eb4da29da487ce5b377, type: 3}
+  prefab: {fileID: 0}
+  type: 0
+  description: It Tastes Like it sounds.
+  restoreHealthValue: 10
