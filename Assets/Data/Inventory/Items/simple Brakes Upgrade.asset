@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eba4925842c64e40ae3c26a46ddb053, type: 3}
   m_Name: simple Brakes Upgrade
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 5646733542002043337, guid: 24ac2190808fd8f48a7dc31783d4ffdb, type: 3}
   type: 2
-  description: 
+  description: a little more power to the brakes.
   tourqeChange: 0
   breakTourqeChange: 5000

@@ -6,7 +6,7 @@ public class TimeManager : MonoBehaviour
 {
     public static bool gameIsPaused;
 
-    public FloatVariable timeReaminingInDay;
+    public float timeReaminingInDay;
     public FloatReference dayDuration;
     public IntVariable dayCount;
     
@@ -16,7 +16,7 @@ public class TimeManager : MonoBehaviour
     void Start()
     {
         dayCount.SetValue(0);
-        timeReaminingInDay.ApplyChange(dayDuration.Value);
+        timeReaminingInDay=dayDuration.Value;
         
     }
 
@@ -51,15 +51,15 @@ public class TimeManager : MonoBehaviour
     void CountDays() {
 
 
-        if (timeReaminingInDay.Value<= 0)
+        if (timeReaminingInDay<= 0)
         {
             dayCount.Value++;
             Debug.Log(dayCount.Value + " Days has passed");
-            timeReaminingInDay.ApplyChange(dayDuration.Value);
+            timeReaminingInDay=dayDuration.Value;
         }
         else
         {
-            timeReaminingInDay.ApplyChange(-Time.deltaTime);
+            timeReaminingInDay-=Time.deltaTime;
 
         }
 

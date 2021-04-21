@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a788f243402bb3947ba10a9127ea5167, type: 3}
   m_Name: Cargo Inventory
   m_EditorClassIdentifier: 
-  Container: []
+  savePath: 
+  database: {fileID: 11400000, guid: d70a0ccec6f0ee84c966d399120d0f3b, type: 2}
+  Container:
+  - ID: 1
+    item: {fileID: 11400000, guid: 8f0a9cc37a64f6443954752a27d71d98, type: 2}
+    amount: 21
+  - ID: 0
+    item: {fileID: 11400000, guid: 4dac0d911d7ae9f4a962538064a5055d, type: 2}
+    amount: 20

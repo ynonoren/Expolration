@@ -6,13 +6,19 @@ public class InventoryManager : MonoBehaviour
 {
 
     public InventoryObject inventory;
-    public bool resetInventoryOnStart;
+  
 
-
-    private void Start()
+    private void Update()
     {
-        if (resetInventoryOnStart)
-            ResetInventory();
+        if (Input.GetKeyDown(KeyCode.F5))
+        {
+            inventory.Save();
+        }
+
+        if (Input.GetKeyDown(KeyCode.F9))
+        {
+            inventory.Load();
+        }
 
     }
     public void AddToInventory()
@@ -36,6 +42,9 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-
+    private void OnApplicationQuit()
+    {
+        ResetInventory();
+    }
 
 }
