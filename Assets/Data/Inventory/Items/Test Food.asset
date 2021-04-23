@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d991ff9f9f7e25545a371e7b022be0bb, type: 3}
   m_Name: Test Food
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5646733542002043337, guid: ec4019b13a397a949ad897c8c230f08e, type: 3}
+  Id: 3
+  uiDisplay: {fileID: 21300000, guid: ec310f7be6f12c244949fc31132b3973, type: 3}
   type: 0
   description: It Tastes Like it sounds.
-  restoreHealthValue: 10
+  buffs: []

@@ -6,9 +6,7 @@ using UnityEngine;
 
 public class EquipmentObject : ItemObject
 {
-    public float tourqeChange;
-    public float breakTourqeChange;
-
+    
 
     private void Awake()
     {

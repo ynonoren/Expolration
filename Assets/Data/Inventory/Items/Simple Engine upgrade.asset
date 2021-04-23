@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eba4925842c64e40ae3c26a46ddb053, type: 3}
   m_Name: Simple Engine upgrade
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5646733542002043337, guid: 4b33308e62b95b442932d29d07a3299d, type: 3}
+  Id: 2
+  uiDisplay: {fileID: 21300000, guid: 1fc9d0aa081f45d4ebaee56fe9210b64, type: 3}
   type: 2
   description: a little more power to the engine.
-  tourqeChange: 2000
-  breakTourqeChange: 0
+  buffs:
+  - attribute: 3
+    value: 0
+    min: 200
+    max: 800
