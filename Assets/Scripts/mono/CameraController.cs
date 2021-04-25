@@ -23,11 +23,11 @@ public class CameraController : MonoBehaviour
     {
         HandleCamera();
     }
-         void HandleCamera()
+    void HandleCamera()
     {
         Vector3 worldPosition = (Vector3.forward * -distance) + (Vector3.up * height);
 
-        Vector3 rotatedVector =Quaternion.AngleAxis(angle,Vector3.up) * worldPosition;
+        Vector3 rotatedVector = Quaternion.AngleAxis(angle, Vector3.up) * worldPosition;
 
         Vector3 flatTargetPosition = target.position;
 
