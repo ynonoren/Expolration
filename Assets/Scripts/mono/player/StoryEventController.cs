@@ -10,11 +10,11 @@ public class StoryEventController : MonoBehaviour
         rb = GetComponent<Rigidbody>();  
     }
 
-   public void EnterParking()
+   public void DisableCar()
     {
         rb.isKinematic = true;
     }
-    public void ExitParking()
+    public void EnableCar()
     {
         rb.isKinematic = false;
     }

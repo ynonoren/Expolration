@@ -26,6 +26,7 @@ public enum Attributes
 public  class ItemObject : ScriptableObject
 {
     public Sprite uiDisplay;
+    public GameObject characterDisplay;
     public bool stackable;
     public ItemType type;
     [TextArea(15, 20)]
@@ -61,14 +62,18 @@ public class Item
         buffs = new ItemBuff[item.data.buffs.Length];
         for (int i = 0; i < buffs.Length; i++)
         {
-            
-            buffs[i] = new ItemBuff(item.data.buffs[i].min, item.data.buffs[i].max);
-            buffs[i].attribute = item.data.buffs[i].attribute;
+
+            buffs[i] = new ItemBuff(item.data.buffs[i].min, item.data.buffs[i].max)
+            {
+                attribute = item.data.buffs[i].attribute
+            };
         }
     }
 }
+
+
 [System.Serializable]
-public class ItemBuff
+public class ItemBuff :IModifier
 {
     public Attributes attribute;
     public int value;
@@ -79,6 +84,10 @@ public class ItemBuff
         min = _min;
         max = _max;
         GenerateValue();
+    }
+    public void AddValue(ref int baseValue)
+    {
+        baseValue += value;
     }
     public void GenerateValue()
     {

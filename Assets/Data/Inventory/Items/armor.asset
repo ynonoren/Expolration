@@ -18,5 +18,9 @@ MonoBehaviour:
   description: test armor
   data:
     Name: 
-    Id: -1
-    buffs: []
+    Id: 1
+    buffs:
+    - attribute: 2
+      value: 0
+      min: 30
+      max: 50

@@ -18,5 +18,9 @@ MonoBehaviour:
   description: engine upgrade 2
   data:
     Name: 
-    Id: -1
-    buffs: []
+    Id: 3
+    buffs:
+    - attribute: 0
+      value: 0
+      min: 1000
+      max: 2000
