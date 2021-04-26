@@ -11,11 +11,11 @@ PrefabInstance:
         type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: a2cfaa52bec5e104c8bc6207e2f1c9c2,
+      objectReference: {fileID: 11400000, guid: 07ff421cdb69d004a9336aeb103e3032,
         type: 2}
     - target: {fileID: 1118085362977378, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_Name
-      value: Food Crate
+      value: Food Crate 1
       objectReference: {fileID: 0}
     - target: {fileID: 4035765028099436, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_RootOrder

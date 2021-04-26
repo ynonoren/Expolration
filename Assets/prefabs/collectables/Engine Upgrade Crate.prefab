@@ -11,11 +11,11 @@ PrefabInstance:
         type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 8f0a9cc37a64f6443954752a27d71d98,
+      objectReference: {fileID: 11400000, guid: 9c5615fde096af149be886d380ed51c8,
         type: 2}
     - target: {fileID: 1118085362977378, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_Name
-      value: Prototype Crate Variant 1
+      value: Engine Upgrade Crate
       objectReference: {fileID: 0}
     - target: {fileID: 4035765028099436, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_RootOrder

@@ -11,11 +11,11 @@ PrefabInstance:
         type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 9897e904644770b44923e5a2151e1423,
+      objectReference: {fileID: 11400000, guid: 2b1937a91d377bc4ea8a71a66b83fbce,
         type: 2}
     - target: {fileID: 1118085362977378, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_Name
-      value: Prototype Crate Variant
+      value: Fuel Crate
       objectReference: {fileID: 0}
     - target: {fileID: 4035765028099436, guid: 5527826a6315a224d850675a730c4f62, type: 3}
       propertyPath: m_RootOrder
