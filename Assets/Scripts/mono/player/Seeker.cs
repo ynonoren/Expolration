@@ -16,6 +16,7 @@ public class Seeker : MonoBehaviour
     void Update()
     { 
         Collider[] coll = Physics.OverlapSphere(transform.position, range);
+       
         for (int i = 0; i < coll.Length; i++)
         {
           if (coll[i].gameObject.GetComponent<Enemy>())
@@ -27,6 +28,7 @@ public class Seeker : MonoBehaviour
                     lr.positionCount=2;
                     lr.SetPosition(0, transform.position);
                     lr.SetPosition(1, pos);
+                    transform.LookAt(coll[i].transform.position);
                 }
                 else
                 {
@@ -35,5 +37,6 @@ public class Seeker : MonoBehaviour
 
             }
         }
+      
     }
 }
