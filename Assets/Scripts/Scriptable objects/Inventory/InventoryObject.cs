@@ -67,6 +67,19 @@ public class InventoryObject : ScriptableObject
         }
         return null;
     }
+
+    public InventorySlot FindItemOfType(ItemType itemType)
+    {
+        for (int i = 0; i < GetSlots.Length; i++)
+        {
+            if (GetSlots[i].item.type == itemType)
+            {
+                return GetSlots[i];
+            }
+        }
+        return null;
+    }
+
     public InventorySlot SetEmptySlot(Item _item, int _amount)
     {
         for (int i = 0; i < GetSlots.Length; i++)
@@ -101,7 +114,7 @@ public class InventoryObject : ScriptableObject
         {
             if (GetSlots[i].item==_item)
             {
-                GetSlots[i].UpdateSlot(null, 0);
+                GetSlots[i].UpdateSlot(new Item(), 0);
             }
         }
     }

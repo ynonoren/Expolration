@@ -122,7 +122,15 @@ public class Player : MonoBehaviour
         }
     }
 
-
+    public void onEndofFuelBar()
+    {
+        InventorySlot inventoryFuel = inventory.FindItemOfType(ItemType.Fuel);
+        if (inventoryFuel != null)
+        {
+            gameObject.GetComponent<FuelManager>().refillFuel = true;
+            inventory.RemoveItem(inventoryFuel.item);
+        }
+    }
 
 
 
