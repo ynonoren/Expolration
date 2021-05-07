@@ -4818,7 +4818,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1625944889}
-        m_MethodName: onEndofFuelBar
+        m_MethodName: onEndofTankBar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6111,6 +6111,12 @@ PrefabInstance:
     - target: {fileID: 2263002576972869623, guid: 48743227fd90fa34484017fd21d4a61a,
         type: 3}
       propertyPath: endOfFuel
+      value: 
+      objectReference: {fileID: 11400000, guid: 342707b9254a9024b8fdbdc4a56c5b6e,
+        type: 2}
+    - target: {fileID: 2263002576972869623, guid: 48743227fd90fa34484017fd21d4a61a,
+        type: 3}
+      propertyPath: endOfTank
       value: 
       objectReference: {fileID: 11400000, guid: 342707b9254a9024b8fdbdc4a56c5b6e,
         type: 2}

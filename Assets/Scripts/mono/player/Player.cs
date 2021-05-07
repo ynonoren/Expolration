@@ -122,7 +122,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void onEndofFuelBar()
+    public void onEndofTankBar()
     {
         InventorySlot inventoryFuel = inventory.FindItemOfType(ItemType.Fuel);
         if (inventoryFuel != null)

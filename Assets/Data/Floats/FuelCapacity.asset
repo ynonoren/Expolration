@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FuelCapacity
   m_EditorClassIdentifier: 
   DeveloperDescription: 
-  Value: 50
+  Value: 10

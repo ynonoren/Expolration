@@ -8,7 +8,7 @@ using UnityEngine.Events;
     public class FuelManager : MonoBehaviour
     {
         public GameEvent OutOfFuel;
-        public GameEvent endOfFuel;
+        public GameEvent endOfTank;
         public GameEvent StartEngine;
         public FloatVariable currentFuel;
         public FloatReference fuelConsumptionRate;
@@ -35,7 +35,7 @@ using UnityEngine.Events;
         {
         if (currentFuel.Value <= 0f)
         {
-            endOfFuel.Raise();
+            endOfTank.Raise();
             if (refillFuel)
             {
                 refillFuel = false;
