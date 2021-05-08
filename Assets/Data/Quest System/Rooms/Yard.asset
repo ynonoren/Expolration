@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c55b25c617ef7045b7f4775b277ff93, type: 3}
+  m_Name: Yard
+  m_EditorClassIdentifier: 
+  roomName: yard
+  description: A drity yard.
+  exits:
+  - exitName: gate
+    exitInteractionText: leave the yard
+    exitDescription: rusty gate.
+    valueRoom: {fileID: 11400000, guid: 34d1d3869d27548419df2fdc902b7d7c, type: 2}

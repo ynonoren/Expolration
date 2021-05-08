@@ -48,10 +48,10 @@ public abstract class UserInterface : MonoBehaviour
     }
 
     //// Update is called once per frame
-    //void Update()
-    //{
-    //    slotsOnInterface.UpdateSlotDisplay();
-    //}
+    void Update()
+    {
+        slotsOnInterface.UpdateSlotDisplay();
+   }
 
 
     public abstract void CreateSlots();

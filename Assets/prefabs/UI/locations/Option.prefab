@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3743709825077267127}
   - component: {fileID: 3743709825077267124}
   - component: {fileID: 3743709825077267125}
+  - component: {fileID: 5536734036614763172}
   m_Layer: 5
   m_Name: Option
   m_TagString: Untagged
@@ -130,6 +131,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5536734036614763172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3743709825077267131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07e3ff45ba104b4b92646564affd2d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentRoom: {fileID: 0}
+  optionText: 
 --- !u!1 &8322096895739233420
 GameObject:
   m_ObjectHideFlags: 0
