@@ -47,6 +47,7 @@ public class Item
     public string Name;
     public int Id=-1;
     public ItemBuff[] buffs;
+    public ItemType type;
 
     public Item()
     {
@@ -68,6 +69,7 @@ public class Item
                 attribute = item.data.buffs[i].attribute
             };
         }
+        type = item.type;
     }
 }
 

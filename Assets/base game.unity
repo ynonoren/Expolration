@@ -3465,10 +3465,10 @@ RectTransform:
   m_Father: {fileID: 2377442370069471922}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -855.5, y: -279.5}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1426428488
 PrefabInstance:
@@ -4519,6 +4519,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1930369709}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1625944889 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2263002576680969597, guid: 48743227fd90fa34484017fd21d4a61a,
+    type: 3}
+  m_PrefabInstance: {fileID: 586536329326386699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd4488bac6e2a74888a50bf88ec82f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1625944893 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5481981869186271127, guid: 48743227fd90fa34484017fd21d4a61a,
+    type: 3}
+  m_PrefabInstance: {fileID: 586536329326386699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11148b15b386062418195adafcd50449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1722358959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4758,6 +4782,7 @@ GameObject:
   - component: {fileID: 1791281291}
   - component: {fileID: 1791281285}
   - component: {fileID: 1791281287}
+  - component: {fileID: 1791281292}
   m_Layer: 0
   m_Name: GameEventManager
   m_TagString: Untagged
@@ -4781,7 +4806,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1219514687}
+      - m_Target: {fileID: 1625944893}
         m_MethodName: CutEngine
         m_Mode: 1
         m_Arguments:
@@ -4965,6 +4990,33 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1568732940}
         m_MethodName: UnPauseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1791281292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791281284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e839e4c12473014b9b3d3faccc0f61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 342707b9254a9024b8fdbdc4a56c5b6e, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1625944889}
+        m_MethodName: onEndofTankBar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5660,7 +5712,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 7.5, y: 8.590027}
+  m_AnchoredPosition: {x: 7.5, y: 8.590088}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &2009401681
@@ -6123,6 +6175,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2263002576972869623, guid: 48743227fd90fa34484017fd21d4a61a,
+        type: 3}
+      propertyPath: endOfFuel
+      value: 
+      objectReference: {fileID: 11400000, guid: 342707b9254a9024b8fdbdc4a56c5b6e,
+        type: 2}
+    - target: {fileID: 2263002576972869623, guid: 48743227fd90fa34484017fd21d4a61a,
+        type: 3}
+      propertyPath: endOfTank
+      value: 
+      objectReference: {fileID: 11400000, guid: 342707b9254a9024b8fdbdc4a56c5b6e,
+        type: 2}
     - target: {fileID: 2263002577845685588, guid: 48743227fd90fa34484017fd21d4a61a,
         type: 3}
       propertyPath: m_LocalPosition.y
